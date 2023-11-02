@@ -10,7 +10,7 @@ module.exports = (sequelize, options) => {
 		},
 		first_name: Sequelize.STRING,
 		last_name: Sequelize.STRING,
-		email: Sequelize.STRING,
+		email: {type:Sequelize.STRING,unique:true, allowNull: false},
 		password: Sequelize.STRING,
 		created_at: Sequelize.DATE,
 		updated_at: Sequelize.DATE,

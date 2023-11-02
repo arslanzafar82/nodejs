@@ -1,4 +1,5 @@
 module.exports = {
+	port: process.env.PORT,
     db: {
 		db: process.env.MYSQL_DB,
 		user: process.env.MYSQL_USER,
