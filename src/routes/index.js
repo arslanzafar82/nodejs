@@ -2,6 +2,7 @@
 // const router = require('express').Router();
 const router = require('express').Router();
 const UserController = require('../controllers/UserController')
+const PostController = require('../controllers/PostController')
 const MiddlewareController = require('../controllers/MiddlewareController')
 const jwt = require("jsonwebtoken");
 router.use(MiddlewareController.middleware)
@@ -23,6 +24,7 @@ let auth = (req, res, next) => {
 router.post('/login', UserController.login);
 router.post('/signup', UserController.signup);
 router.get('/home',auth, UserController.home);
+router.post('/addPost',auth, PostController.addPost);
 
 
 

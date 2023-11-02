@@ -47,7 +47,6 @@ module.exports.login = async(req,res) => {
 
 module.exports.home = async(req, res) =>{
   console.log("Home");
-  console.log(req.user);
   let users = await User.findAll();
   return res.send(users);
 }

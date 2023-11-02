@@ -30,9 +30,9 @@ module.exports = (sequelize, options) => {
 			}
 		}
 	})
-	// User.associate = models => {
-
-	// }
+	User.associate = models => {
+		User.hasMany(models.Post, {as: 'posts', foreignKey: 'user_id'});
+	}
 	console.log(User, "user output")
 	return User;
 }

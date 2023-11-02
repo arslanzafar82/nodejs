@@ -36,6 +36,7 @@ const options = {
 let queryInterface = connection.getQueryInterface();
 const models = {
     User: require('./models/User')(connection, options),
+    Post: require('./models/Post')(connection, options),
 }
 
 
